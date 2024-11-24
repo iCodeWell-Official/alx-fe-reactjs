@@ -6,13 +6,13 @@ import RecipeDetails from "./components/RecipeDetails";
 
 function App() {
   return (
-    <Router>
-      <Routes>
-        <Route path="/" element={<RecipeList />} />
-        <Route path="/add" element={<AddRecipeForm />} />
-        <Route path="/recipe/:id" element={<RecipeDetails />} />
-      </Routes>
-    </Router>
+    <BrowserRouter>
+    <Routes>
+      <Route path="/" element={<RecipeList />} />
+      <Route path="/recipe/:id" element={<RecipeDetails />} />
+      <Route path="/recipe/:id/edit" element={<EditRecipeForm />} />
+    </Routes>
+  </BrowserRouter>
   );
 }
 
